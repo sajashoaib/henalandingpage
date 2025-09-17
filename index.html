@@ -14,7 +14,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
+  <!-- مكتبات غير حرجة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
+        onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+    </noscript>
 
     <script>
         tailwind.config = {
@@ -117,13 +125,11 @@
             border-radius: 20px;
             transition: all 0.3s ease;
         }
-
-        #langMenuBtn:hover,
-        #mobileLangMenuBtn:hover {
+        #langMenuBtn:hover,#mobileLangMenuBtn:hover{
             color: #349f4c;
         }
-
-        .nav-link:hover {
+  
+        .nav-link:hover{
             background: rgba(52, 159, 76, 0.1);
             color: #349f4c;
         }
@@ -895,18 +901,30 @@
                 font-size: 0.9rem;
             }
         }
+
+
+        
     </style>
 </head>
 
 <body>
 
-    <div id="splash" class="fixed inset-0 flex flex-col items-center justify-center z-[9999]"
+    <!-- <div id="splash" class="fixed inset-0 flex flex-col items-center justify-center z-[9999]"
         style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
         <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png" alt="شعار حنّا غير"
             class="w-32 h-auto mb-6 animate-pulse">
         <div class="w-12 h-12 border-4 border-white border-t-primary rounded-full animate-spin"></div>
+    </div> -->
+
+<!-- Splash -->
+<div id="splash" class="fixed inset-0 flex flex-col items-center justify-center bg-[#0f172a] z-[9999]"
+style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+ <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png" alt="شعار حنّا غير"
+            class="w-32 h-auto mb-6 animate-pulse">
+        <div class="w-12 h-12 border-4 border-white border-t-primary rounded-full animate-spin"></div>
     </div>
 
+<div id="page-content" class="opacity-0 pointer-events-none">
 
     <nav class="navbar fixed top-0 left-0 right-0 z-50 px-6 py-4" id="navbar">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
@@ -924,24 +942,22 @@
                 <a href="#packages" class="nav-link">باقاتنا</a>
                 <a href="#fikra" class="nav-link">فكرة</a>
                 <a href="#contact" class="nav-link">تواصل معنا</a>
-                <!-- Language Switch -->
-                <!-- Language Dropdown -->
-                <div class="relative">
-                    <button id="langMenuBtn" class="flex items-center gap-2 text-white font-semibold px-3 transition">
-                        🌐 اللغة
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                   <!-- Language Switch -->
+ <!-- Language Dropdown -->
+<div class="relative">
+  <button id="langMenuBtn" class="flex items-center gap-2 text-white font-semibold px-3 transition">
+    🌐 اللغة
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
-                    <!-- Dropdown List -->
-                    <div id="langMenu" class="hidden absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-50">
-                        <a href="index.html"
-                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">العربية</a>
-                        <a href="index-en.html"
-                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">English</a>
-                    </div>
-                </div>
+  <!-- Dropdown List -->
+  <div id="langMenu" class="hidden absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-50">
+    <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">العربية</a>
+    <a href="index-en.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">English</a>
+  </div>
+</div>
             </div>
 
             <!-- CTA Button -->
@@ -949,7 +965,7 @@
                 🚀 ابدأ مشروعك
             </a>
 
-
+            
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-white z-[1000] relative">
@@ -980,48 +996,36 @@
             <a href="#packages" class="block nav-link">باقاتنا</a>
             <a href="#fikra" class="block nav-link">فكرة</a>
             <a href="#contact" class="block nav-link">تواصل معنا</a>
-            <div class="relative">
-                <button id="mobileLangMenuBtn" class="flex items-center gap-2 text-white font-semibold px-3 transition">
-                    🌐 اللغة
-                    <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
+<div class="relative">
+  <button id="mobileLangMenuBtn" class="flex items-center gap-2 text-white font-semibold px-3 transition">
+    🌐 اللغة
+    <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
-                <!-- Dropdown -->
-                <div id="mobileLangMenu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out ">
-                    <a href="index.html"
-                        class="block py-2 text-white border-b border-white hover:text-green-500 transition-colors duration-200">العربية</a>
-                    <a href="index-en.html"
-                        class="block py-2 text-white hover:text-green-500 transition-colors duration-200">English</a>
-                </div>
-            </div>
+  <!-- Dropdown -->
+  <div id="mobileLangMenu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out ">
+    <a href="index.html" class="block py-2 text-white border-b border-white hover:text-green-500 transition-colors duration-200">العربية</a>
+    <a href="index-en.html" class="block py-2 text-white hover:text-green-500 transition-colors duration-200">English</a>
+  </div>
+</div>
 
 
             <a href="#contact" class="simple-btn w-full text-center mt-6">🚀 ابدأ مشروعك</a>
-
+             
         </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 wow animate__animated animate__fadeInDown">
         <div class="max-w-6xl mx-auto text-center">
             <div class="fade-in">
                 <h1 class="text-5xl md:text-7xl font-black mb-6 hero-title breathe">
                     حنّا غير
                 </h1>
-                <p class="text-2xl md:text-3xl mb-4 text-primary font-bold">
+                <p class="text-2xl md:text-3xl mb-4 text-primary font-bold  ">
                     لأننا نروي قصتك بأسلوب مختلف ✨
                 </p>
                 <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -1034,7 +1038,7 @@
                 <a href="#contact" class="simple-btn text-lg px-8 py-4 gentle-hover">
                     🎯 ابدأ رحلتك التسويقية الآن
                 </a>
-            </div>
+                </div>
 
             <!-- Stats -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
@@ -1999,6 +2003,7 @@
         </div>
 
     </div>
+</div>
     <!-- JavaScript -->
     <script>
         // Navbar Scroll Effect
@@ -2572,61 +2577,68 @@ ${data.message}
         }
     </script>
 
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      // أخفي السبلاش
+      const splash = document.getElementById('splash');
+      splash.style.opacity = "0";
+      splash.style.transition = "opacity 0.6s ease";
+
+      setTimeout(() => splash.remove(), 600);
+
+      // أظهر المحتوى
+      const content = document.getElementById('page-content');
+      content.classList.remove("opacity-0", "pointer-events-none");
+
+      // أعد تشغيل WOW
+      new WOW().init();
+
+    }, 2000); // مدة السبلاش
+  });
+</script>
+
+
+
     <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                // إزالة السبلاش
-                const splash = document.getElementById('splash');
-                splash.remove();
+// Desktop
+const langMenuBtn = document.getElementById("langMenuBtn");
+const langMenu = document.getElementById("langMenu");
 
-                // إظهار العناصر الأساسية
-                document.querySelector('.navbar').classList.remove('hidden');
-                document.querySelector('.whatsapp-wrapper').classList.remove('hidden');
-                document.getElementById('page-content').classList.remove('hidden');
+langMenuBtn.addEventListener("click", () => {
+  langMenu.classList.toggle("hidden");
+});
 
-                // السماح بالتمرير
-                document.getElementById('main-body').classList.remove('overflow-hidden');
-            }, 2000); // مدة ظهور الـ splash (2 ثواني)
-        });
-    </script>
-    <script>
-        // Desktop
-        const langMenuBtn = document.getElementById("langMenuBtn");
-        const langMenu = document.getElementById("langMenu");
+// Mobile
+const mobileLangMenuBtn = document.getElementById("mobileLangMenuBtn");
+const mobileLangMenu = document.getElementById("mobileLangMenu");
 
-        langMenuBtn.addEventListener("click", () => {
-            langMenu.classList.toggle("hidden");
-        });
+mobileLangMenuBtn.addEventListener("click", () => {
+  mobileLangMenu.classList.toggle("hidden");
+});
 
-        // Mobile
-        const mobileLangMenuBtn = document.getElementById("mobileLangMenuBtn");
-        const mobileLangMenu = document.getElementById("mobileLangMenu");
+// إغلاق القوائم عند الضغط خارجها
+window.addEventListener("click", function (e) {
+  if (!langMenu.contains(e.target) && !langMenuBtn.contains(e.target)) {
+    langMenu.classList.add("hidden");
+  }
+  if (!mobileLangMenu.contains(e.target) && !mobileLangMenuBtn.contains(e.target)) {
+    mobileLangMenu.classList.add("hidden");
+  }
+});
 
-        mobileLangMenuBtn.addEventListener("click", () => {
-            mobileLangMenu.classList.toggle("hidden");
-        });
-
-        // إغلاق القوائم عند الضغط خارجها
-        window.addEventListener("click", function (e) {
-            if (!langMenu.contains(e.target) && !langMenuBtn.contains(e.target)) {
-                langMenu.classList.add("hidden");
-            }
-            if (!mobileLangMenu.contains(e.target) && !mobileLangMenuBtn.contains(e.target)) {
-                mobileLangMenu.classList.add("hidden");
-            }
-        });
-
-        mobileLangMenuBtn.addEventListener("click", () => {
-            if (mobileLangMenu.classList.contains("max-h-0")) {
-                mobileLangMenu.classList.remove("max-h-0");
-                mobileLangMenu.classList.add("max-h-40");
-            } else {
-                mobileLangMenu.classList.remove("max-h-40");
-                mobileLangMenu.classList.add("max-h-0");
-            }
-        });
-    </script>
+ mobileLangMenuBtn.addEventListener("click", () => {
+    if (mobileLangMenu.classList.contains("max-h-0")) {
+      mobileLangMenu.classList.remove("max-h-0");
+      mobileLangMenu.classList.add("max-h-40"); 
+    } else {
+      mobileLangMenu.classList.remove("max-h-40");
+      mobileLangMenu.classList.add("max-h-0");
+    }
+  });
+</script>
     <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'97d8525aa72bc244',t:'MTc1NzYwNTgzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 </body>
 
