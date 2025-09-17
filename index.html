@@ -14,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-  <!-- مكتبات غير حرجة -->
+    <!-- مكتبات غير حرجة -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
         onload="this.media='all'" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
@@ -125,11 +125,13 @@
             border-radius: 20px;
             transition: all 0.3s ease;
         }
-        #langMenuBtn:hover,#mobileLangMenuBtn:hover{
+
+        #langMenuBtn:hover,
+        #mobileLangMenuBtn:hover {
             color: #349f4c;
         }
-  
-        .nav-link:hover{
+
+        .nav-link:hover {
             background: rgba(52, 159, 76, 0.1);
             color: #349f4c;
         }
@@ -901,1109 +903,1134 @@
                 font-size: 0.9rem;
             }
         }
-
-
-        
     </style>
 </head>
 
 <body>
 
-    <!-- <div id="splash" class="fixed inset-0 flex flex-col items-center justify-center z-[9999]"
+
+    <!-- Splash -->
+    <div id="splash" class="fixed inset-0 flex flex-col items-center justify-center bg-[#0f172a] z-[9999]"
         style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
         <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png" alt="شعار حنّا غير"
             class="w-32 h-auto mb-6 animate-pulse">
         <div class="w-12 h-12 border-4 border-white border-t-primary rounded-full animate-spin"></div>
-    </div> -->
-
-<!-- Splash -->
-<div id="splash" class="fixed inset-0 flex flex-col items-center justify-center bg-[#0f172a] z-[9999]"
-style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
- <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png" alt="شعار حنّا غير"
-            class="w-32 h-auto mb-6 animate-pulse">
-        <div class="w-12 h-12 border-4 border-white border-t-primary rounded-full animate-spin"></div>
     </div>
 
-<div id="page-content" class="opacity-0 pointer-events-none">
+    <div id="page-content" class="opacity-0 pointer-events-none">
 
-    <nav class="navbar fixed top-0 left-0 right-0 z-50 px-6 py-4" id="navbar">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png"
-                    alt="شعار حنّا غير" class="w-32 h-auto object-contain">
-            </div>
+        <nav class="navbar fixed top-0 left-0 right-0 z-50 px-6 py-4" id="navbar">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png"
+                        alt="شعار حنّا غير" class="w-32 h-auto object-contain">
+                </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-6 space-x-reverse">
-                <a href="#home" class="nav-link">الرئيسية</a>
-                <a href="#about" class="nav-link">من نحن</a>
-                <a href="#services" class="nav-link">خدماتنا</a>
-                <a href="#packages" class="nav-link">باقاتنا</a>
-                <a href="#fikra" class="nav-link">فكرة</a>
-                <a href="#contact" class="nav-link">تواصل معنا</a>
-                   <!-- Language Switch -->
- <!-- Language Dropdown -->
-<div class="relative">
-  <button id="langMenuBtn" class="flex items-center gap-2 text-white font-semibold px-3 transition">
-    🌐 اللغة
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 space-x-reverse">
+                    <a href="#home" class="nav-link">الرئيسية</a>
+                    <a href="#about" class="nav-link">من نحن</a>
+                    <a href="#services" class="nav-link">خدماتنا</a>
+                    <a href="#packages" class="nav-link">باقاتنا</a>
+                    <a href="#fikra" class="nav-link">فكرة</a>
+                    <a href="#contact" class="nav-link">تواصل معنا</a>
+                    <!-- Language Switch -->
+                    <!-- Language Dropdown -->
+                    <div class="relative">
+                        <button id="langMenuBtn"
+                            class="flex items-center gap-2 text-white font-semibold px-3 transition">
+                            🌐 اللغة
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
 
-  <!-- Dropdown List -->
-  <div id="langMenu" class="hidden absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-50">
-    <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">العربية</a>
-    <a href="index-en.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">English</a>
-  </div>
-</div>
-            </div>
+                        <!-- Dropdown List -->
+                        <div id="langMenu" class="hidden absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-50">
+                            <a href="index.html"
+                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">العربية</a>
+                            <a href="index-en.html"
+                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">English</a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- CTA Button -->
-            <a href="#contact" class="hidden md:block simple-btn">
-                🚀 ابدأ مشروعك
-            </a>
-
-            
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white z-[1000] relative">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-        class="fixed top-0 right-0 h-full w-80 z-[9999] bg-[#0f172a]/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="flex justify-between items-center p-6">
-            <img src="https://assets.lightfunnels.com/account-54128/images_library/588c5911-f70e-45b3-bf27-d3a35b23feb8.%D8%AD%D9%86%D8%A7%20%D8%BA%D9%8A%D8%B1fi-02.png"
-                alt="شعار حنّا غير" class="w-24 h-auto object-contain">
-            <button id="close-menu" class="text-white">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="space-y-4 p-6">
-            <a href="#home" class="block nav-link">الرئيسية</a>
-            <a href="#about" class="block nav-link">من نحن</a>
-            <a href="#services" class="block nav-link">خدماتنا</a>
-            <a href="#packages" class="block nav-link">باقاتنا</a>
-            <a href="#fikra" class="block nav-link">فكرة</a>
-            <a href="#contact" class="block nav-link">تواصل معنا</a>
-<div class="relative">
-  <button id="mobileLangMenuBtn" class="flex items-center gap-2 text-white font-semibold px-3 transition">
-    🌐 اللغة
-    <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
-
-  <!-- Dropdown -->
-  <div id="mobileLangMenu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out ">
-    <a href="index.html" class="block py-2 text-white border-b border-white hover:text-green-500 transition-colors duration-200">العربية</a>
-    <a href="index-en.html" class="block py-2 text-white hover:text-green-500 transition-colors duration-200">English</a>
-  </div>
-</div>
-
-
-            <a href="#contact" class="simple-btn w-full text-center mt-6">🚀 ابدأ مشروعك</a>
-             
-        </div>
-    </div>
-
-
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 wow animate__animated animate__fadeInDown">
-        <div class="max-w-6xl mx-auto text-center">
-            <div class="fade-in">
-                <h1 class="text-5xl md:text-7xl font-black mb-6 hero-title breathe">
-                    حنّا غير
-                </h1>
-                <p class="text-2xl md:text-3xl mb-4 text-primary font-bold  ">
-                    لأننا نروي قصتك بأسلوب مختلف ✨
-                </p>
-                <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    من إدارة حسابات السوشيال ميديا إلى إنتاج المحتوى الإبداعي وتصوير منتجاتك وتنظيم فعالياتك…
-                    نحن نصنع حضورًا يليق بعلامتك التجارية ويترك أثرًا لا يُنسى.
-                </p>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 fade-in">
-                <a href="#contact" class="simple-btn text-lg px-8 py-4 gentle-hover">
-                    🎯 ابدأ رحلتك التسويقية الآن
+                <!-- CTA Button -->
+                <a href="#contact" class="hidden md:block simple-btn">
+                    🚀 ابدأ مشروعك
                 </a>
-                </div>
 
-            <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
-                <div class="simple-card p-6 text-center">
-                    <div class="stat-number" data-target="150">0</div>
-                    <div class="text-sm text-gray-400">مشروع مكتمل</div>
-                </div>
-                <div class="simple-card p-6 text-center">
-                    <div class="stat-number" data-target="50">0</div>
-                    <div class="text-sm text-gray-400">عميل سعيد</div>
-                </div>
-                <div class="simple-card p-6 text-center">
-                    <div class="stat-number" data-target="5">0</div>
-                    <div class="text-sm text-gray-400">سنوات خبرة</div>
-                </div>
-                <div class="simple-card p-6 text-center">
-                    <div class="stat-number" data-target="24">0</div>
-                    <div class="text-sm text-gray-400">ساعة دعم</div>
-                </div>
+
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white z-[1000] relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-6 creative-bg relative overflow-hidden">
-        <!-- Floating Icons -->
-        <div class="floating-icon text-6xl wiggle" onclick="this.style.animation='wiggle 0.5s ease-in-out'">🚀</div>
-        <div class="floating-icon text-6xl" onclick="this.style.animation='wiggle 0.5s ease-in-out'">✨</div>
-        <div class="floating-icon text-6xl" onclick="this.style.animation='wiggle 0.5s ease-in-out'">🎯</div>
-        <div class="floating-icon text-6xl" onclick="this.style.animation='wiggle 0.5s ease-in-out'">💡</div>
-
-        <div class="max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">من نحن؟</h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                    في حنّا غير، نؤمن أن لكل علامة تجارية قصة تستحق أن تُروى بأجمل صورة
-                </p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed top-0 right-0 h-full w-80 z-[9999] bg-[#0f172a]/95 backdrop-blur-sm transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex justify-between items-center p-6">
+                <img src="https://assets.lightfunnels.com/account-54128/images_library/588c5911-f70e-45b3-bf27-d3a35b23feb8.%D8%AD%D9%86%D8%A7%20%D8%BA%D9%8A%D8%B1fi-02.png"
+                    alt="شعار حنّا غير" class="w-24 h-auto object-contain">
+                <button id="close-menu" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
 
-            <div class="about-timeline fade-in">
-                <!-- Story Item -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-2xl font-bold text-primary mb-4">📖 قصتنا</h3>
-                        <div class="expandable-text" data-id="about-story">
-                            <div class="text-preview">
-                                <p class="text-gray-300 leading-relaxed">
-                                    في حنّا غير، نؤمن أن لكل علامة تجارية قصة تستحق أن تُروى بأجمل صورة، وأن لكل مناسبة
-                                    لمسة خاصة تجعلها ذكرى خالدة...
-                                </p>
-                            </div>
-                            <div class="text-full hidden">
-                                <p class="text-gray-300 leading-relaxed mb-4">
-                                    في حنّا غير، نؤمن أن لكل علامة تجارية قصة تستحق أن تُروى بأجمل صورة، وأن لكل مناسبة
-                                    لمسة خاصة تجعلها ذكرى خالدة، نحن منصة سعودية متخصصة في إدارة مواقع التواصل
-                                    الاجتماعي، إنتاج المحتوى الإبداعي، التصوير الإعلاني وتصوير المنتجات، بالإضافة إلى
-                                    تنظيم وإدارة الفعاليات والحفلات بكافة أنواعها.
-                                </p>
-                                <p class="text-gray-300 leading-relaxed">
-                                    فريقنا يمزج بين الإبداع والخبرة لنقدم لك حلولًا تسويقية متكاملة ترتقي بحضورك وتساعدك
-                                    على الوصول لجمهورك وتحقيق أهدافك.
-                                </p>
-                            </div>
-                            <button onclick="toggleText('about-story')" class="read-more-btn">
-                                <span class="btn-text">اكتشف قصتنا كاملة</span>
-                                <span class="btn-icon">📖</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vision Item -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-2xl font-bold text-secondary mb-4">🎯 رؤيتنا</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            أن نكون الخيار الأول في السعودية لكل من يبحث عن شريك تسويقي مبدع، يحوّل الأفكار إلى نجاحات
-                            ملموسة، والمناسبات إلى لحظات استثنائية.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Values Item -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-2xl font-bold text-accent mb-4">💎 قيمنا</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="text-center">
-                                <div class="text-3xl mb-2">🎨</div>
-                                <h4 class="font-bold text-primary">الإبداع</h4>
-                                <p class="text-sm text-gray-400">نبتكر حلولاً مميزة</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl mb-2">⚡</div>
-                                <h4 class="font-bold text-secondary">السرعة</h4>
-                                <p class="text-sm text-gray-400">تنفيذ سريع وفعال</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl mb-2">🤝</div>
-                                <h4 class="font-bold text-accent">الشراكة</h4>
-                                <p class="text-sm text-gray-400">نعمل معك كشريك</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl mb-2">🏆</div>
-                                <h4 class="font-bold text-primary">التميز</h4>
-                                <p class="text-sm text-gray-400">نسعى للأفضل دائماً</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 px-6 bg-darker/50 relative overflow-hidden">
-        <!-- Background Animation Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="floating-icon text-6xl" style="top: 10%; right: 15%; animation-delay: 0s;">🚀</div>
-            <div class="floating-icon text-6xl" style="top: 60%; left: 10%; animation-delay: 2s;">✨</div>
-            <div class="floating-icon text-6xl" style="bottom: 20%; right: 20%; animation-delay: 1s;">🎯</div>
-        </div>
-
-        <div class="max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">خدماتنا</h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                    نقدم مجموعة شاملة من الخدمات التسويقية المبتكرة لتحقيق أهدافك
-                </p>
-            </div>
-
-            <!-- Services Preview -->
-            <div class="expandable-text" data-id="services-section">
-                <div class="text-preview">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
-                        <!-- Service 1 -->
-                        <div
-                            class="simple-card p-8 text-center group hover:border-primary/50 transition-all duration-300 gentle-hover">
-                            <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500">
-                                <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                                    <circle cx="12" cy="8" r="2" />
-                                    <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">📱
-                                إدارة السوشيال ميديا</h3>
-                            <p class="text-gray-400 text-sm">إدارة شاملة لحساباتك</p>
-                        </div>
-
-                        <!-- Service 2 -->
-                        <div
-                            class="simple-card p-8 text-center group hover:border-secondary/50 transition-all duration-300 gentle-hover">
-                            <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
-                                style="background: linear-gradient(45deg, #aed684, #6ee7b7);">
-                                <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                    <circle cx="12" cy="12" r="3" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">✨
-                                إنتاج المحتوى</h3>
-                            <p class="text-gray-400 text-sm">محتوى إبداعي مميز</p>
-                        </div>
-
-                        <!-- Service 3 -->
-                        <div
-                            class="simple-card p-8 text-center group hover:border-accent/50 transition-all duration-300 gentle-hover">
-                            <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
-                                style="background: linear-gradient(45deg, #6ee7b7, #34d399);">
-                                <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 2l3 6 6 1-4.5 4.5L15 20l-6-3-6 3 1.5-6.5L0 9l6-1 3-6z" />
-                                    <circle cx="12" cy="12" r="8" />
-                                    <path d="M12 6v6l4 2" />
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">📸
-                                تصوير المنتجات</h3>
-                            <p class="text-gray-400 text-sm">صور احترافية مميزة</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-full hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
-                        <!-- Service 1 -->
-                        <div class="service-card">
-                            <div class="service-card-inner">
-                                <div class="service-card-front">
-                                    <div class="service-icon-enhanced">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
-                                            <path
-                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                                            <circle cx="12" cy="8" r="2" />
-                                            <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                                        </svg>
-                                        <div class="service-glow"></div>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">إدارة السوشيال ميديا</h3>
-                                    <p class="text-gray-300 text-sm">إدارة شاملة لحساباتك</p>
-                                    <div class="service-arrow">↻</div>
-                                </div>
-                                <div class="service-card-back">
-                                    <h3 class="text-xl font-bold text-primary mb-4">إدارة السوشيال ميديا</h3>
-                                    <ul class="text-sm text-gray-300 space-y-2 text-right">
-                                        <li>• وضع استراتيجية المحتوى</li>
-                                        <li>• النشر والمتابعة اليومية</li>
-                                        <li>• التفاعل مع الجمهور</li>
-                                        <li>• تحليل الأداء والتقارير</li>
-                                        <li>• إدارة الحملات الإعلانية</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service 2 -->
-                        <div class="service-card">
-                            <div class="service-card-inner">
-                                <div class="service-card-front">
-                                    <div class="service-icon-enhanced">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
-                                            <path
-                                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                            <circle cx="12" cy="12" r="3" />
-                                        </svg>
-                                        <div class="service-glow"></div>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">إنتاج المحتوى</h3>
-                                    <p class="text-gray-300 text-sm">محتوى إبداعي مميز</p>
-                                    <div class="service-arrow">↻</div>
-                                </div>
-                                <div class="service-card-back">
-                                    <h3 class="text-xl font-bold text-primary mb-4">إنتاج المحتوى الإبداعي</h3>
-                                    <ul class="text-sm text-gray-300 space-y-2 text-right">
-                                        <li>• كتابة المحتوى التسويقي</li>
-                                        <li>• تصميم المنشورات</li>
-                                        <li>• إنتاج الفيديوهات القصيرة</li>
-                                        <li>• التصوير الفوتوغرافي</li>
-                                        <li>• المحتوى التفاعلي</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service 3 -->
-                        <div class="service-card">
-                            <div class="service-card-inner">
-                                <div class="service-card-front">
-                                    <div class="service-icon-enhanced">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
-                                            <path d="M9 2l3 6 6 1-4.5 4.5L15 20l-6-3-6 3 1.5-6.5L0 9l6-1 3-6z" />
-                                            <circle cx="12" cy="12" r="8" />
-                                            <path d="M12 6v6l4 2" />
-                                        </svg>
-                                        <div class="service-glow"></div>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">تصوير المنتجات</h3>
-                                    <p class="text-gray-300 text-sm">صور احترافية مميزة</p>
-                                    <div class="service-arrow">↻</div>
-                                </div>
-                                <div class="service-card-back">
-                                    <h3 class="text-xl font-bold text-primary mb-4">التصوير الاحترافي</h3>
-                                    <ul class="text-sm text-gray-300 space-y-2 text-right">
-                                        <li>• تصوير المنتجات</li>
-                                        <li>• التصوير الإعلاني</li>
-                                        <li>• جلسات التصوير الشخصية</li>
-                                        <li>• تصوير الفعاليات</li>
-                                        <li>• المعالجة والتحرير</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service 4 -->
-                        <div class="service-card">
-                            <div class="service-card-inner">
-                                <div class="service-card-front">
-                                    <div class="service-icon-enhanced">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
-                                            <path
-                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                                        </svg>
-                                        <div class="service-glow"></div>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">تنظيم الفعاليات</h3>
-                                    <p class="text-gray-300 text-sm">فعاليات استثنائية</p>
-                                    <div class="service-arrow">↻</div>
-                                </div>
-                                <div class="service-card-back">
-                                    <h3 class="text-xl font-bold text-primary mb-4">تنظيم الفعاليات</h3>
-                                    <ul class="text-sm text-gray-300 space-y-2 text-right">
-                                        <li>• التخطيط والتنظيم</li>
-                                        <li>• إدارة الحفلات</li>
-                                        <li>• المؤتمرات والندوات</li>
-                                        <li>• الفعاليات التجارية</li>
-                                        <li>• المتابعة والتنسيق</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service 5 -->
-                        <div class="service-card">
-                            <div class="service-card-inner">
-                                <div class="service-card-front">
-                                    <div class="service-icon-enhanced">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
-                                            <path
-                                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                            <path d="M9 11H7v8h2v-8zm4 0h-2v8h2v-8zm4 0h-2v8h2v-8z" />
-                                            <circle cx="12" cy="4" r="2" />
-                                        </svg>
-                                        <div class="service-glow"></div>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">التصميم الجرافيكي</h3>
-                                    <p class="text-gray-300 text-sm">تصاميم إبداعية</p>
-                                    <div class="service-arrow">↻</div>
-                                </div>
-                                <div class="service-card-back">
-                                    <h3 class="text-xl font-bold text-primary mb-4">التصميم الجرافيكي</h3>
-                                    <ul class="text-sm text-gray-300 space-y-2 text-right">
-                                        <li>• تصميم الهوية البصرية</li>
-                                        <li>• تصميم المطبوعات</li>
-                                        <li>• تصميم المنشورات</li>
-                                        <li>• تصميم البروشورات</li>
-                                        <li>• التصاميم الرقمية</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service 6 -->
-                        <div class="service-card">
-                            <div class="service-card-inner">
-                                <div class="service-card-front">
-                                    <div class="service-icon-enhanced">
-                                        <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
-                                            <path
-                                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
-                                            <circle cx="12" cy="12" r="3" />
-                                            <path d="M12 6l1.5 3h3.5l-2.5 2 1 3.5-3-2-3 2 1-3.5-2.5-2h3.5z" />
-                                        </svg>
-                                        <div class="service-glow"></div>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white mb-2">الحملات الإعلانية</h3>
-                                    <p class="text-gray-300 text-sm">إعلانات فعّالة</p>
-                                    <div class="service-arrow">↻</div>
-                                </div>
-                                <div class="service-card-back">
-                                    <h3 class="text-xl font-bold text-primary mb-4">الحملات الإعلانية</h3>
-                                    <ul class="text-sm text-gray-300 space-y-2 text-right">
-                                        <li>• إعلانات فيسبوك وإنستغرام</li>
-                                        <li>• إعلانات جوجل</li>
-                                        <li>• إعلانات سناب شات</li>
-                                        <li>• إعلانات تيك توك</li>
-                                        <li>• تحليل وتحسين الأداء</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <button onclick="toggleText('services-section')" class="read-more-btn">
-                        <span class="btn-text">🔍 اكتشف خدماتنا كاملة</span>
-                        <span class="btn-icon">🚀</span>
+            <div class="space-y-4 p-6">
+                <a href="#home" class="block nav-link">الرئيسية</a>
+                <a href="#about" class="block nav-link">من نحن</a>
+                <a href="#services" class="block nav-link">خدماتنا</a>
+                <a href="#packages" class="block nav-link">باقاتنا</a>
+                <a href="#fikra" class="block nav-link">فكرة</a>
+                <a href="#contact" class="block nav-link">تواصل معنا</a>
+                <div class="relative">
+                    <button id="mobileLangMenuBtn"
+                        class="flex items-center gap-2 text-white font-semibold px-3 transition">
+                        🌐 اللغة
+                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
                     </button>
+
+                    <!-- Dropdown -->
+                    <div id="mobileLangMenu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out ">
+                        <a href="index.html"
+                            class="block py-2 text-white border-b border-white hover:text-green-500 transition-colors duration-200">العربية</a>
+                        <a href="index-en.html"
+                            class="block py-2 text-white hover:text-green-500 transition-colors duration-200">English</a>
+                    </div>
                 </div>
+
+
+                <a href="#contact" class="simple-btn w-full text-center mt-6">🚀 ابدأ مشروعك</a>
+
             </div>
         </div>
-    </section>
 
-    <!-- Packages Section -->
-    <section id="packages" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">باقاتنا</h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                    اختر الباقة التي تناسب احتياجاتك وميزانيتك
-                </p>
-            </div>
 
-            <!-- Package Categories -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 fade-in">
-                <!-- Social Media Category -->
-                <div class="simple-card p-8 text-center group hover:border-primary/50 transition-all duration-300 cursor-pointer"
-                    onclick="showPackageDetails('social-media')">
-                    <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                            <circle cx="12" cy="8" r="2" />
-                            <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">📱 إدارة
-                        السوشيال ميديا</h3>
-                    <p class="text-gray-400 text-sm mb-4">3 باقات متنوعة</p>
-                    <div class="simple-btn simple-btn-outline w-full">اكتشف الباقات</div>
+        <!-- Hero Section -->
+        <section id="home"
+            class="min-h-screen flex items-center justify-center px-6 pt-20 wow animate__animated animate__fadeInDown">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 hero-title breathe">
+                        حنّا غير
+                    </h1>
+                    <p class="text-2xl md:text-3xl mb-4 text-primary font-bold  ">
+                        لأننا نروي قصتك بأسلوب مختلف ✨
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                        من إدارة حسابات السوشيال ميديا إلى إنتاج المحتوى الإبداعي وتصوير منتجاتك وتنظيم فعالياتك…
+                        نحن نصنع حضورًا يليق بعلامتك التجارية ويترك أثرًا لا يُنسى.
+                    </p>
                 </div>
 
-                <!-- Photography Category -->
-                <div class="simple-card p-8 text-center group hover:border-secondary/50 transition-all duration-300 cursor-pointer"
-                    onclick="showPackageDetails('photography')">
-                    <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
-                        style="background: linear-gradient(45deg, #aed684, #6ee7b7);">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M9 2l3 6 6 1-4.5 4.5L15 20l-6-3-6 3 1.5-6.5L0 9l6-1 3-6z" />
-                            <circle cx="12" cy="12" r="3" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">📸
-                        التصوير والإعلانات</h3>
-                    <p class="text-gray-400 text-sm mb-4">باقة احترافية</p>
-                    <div class="simple-btn simple-btn-outline w-full">اكتشف الباقة</div>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 fade-in">
+                    <a href="#contact" class="simple-btn text-lg px-8 py-4 gentle-hover">
+                        🎯 ابدأ رحلتك التسويقية الآن
+                    </a>
                 </div>
 
-                <!-- Events Category -->
-                <div class="simple-card p-8 text-center group hover:border-accent/50 transition-all duration-300 cursor-pointer"
-                    onclick="showPackageDetails('events')">
-                    <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
-                        style="background: linear-gradient(45deg, #6ee7b7, #34d399);">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                        </svg>
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
+                    <div class="simple-card p-6 text-center">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="text-sm text-gray-400">مشروع مكتمل</div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">🎉 الفعاليات
-                        والاحتفالات</h3>
-                    <p class="text-gray-400 text-sm mb-4">باقة شاملة</p>
-                    <div class="simple-btn simple-btn-outline w-full">اكتشف الباقة</div>
+                    <div class="simple-card p-6 text-center">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="text-sm text-gray-400">عميل سعيد</div>
+                    </div>
+                    <div class="simple-card p-6 text-center">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="text-sm text-gray-400">سنوات خبرة</div>
+                    </div>
+                    <div class="simple-card p-6 text-center">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="text-sm text-gray-400">ساعة دعم</div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Package Details Container -->
-            <div id="package-details" class="hidden">
-                <!-- Social Media Packages -->
-                <div id="social-media-packages" class="package-section hidden">
-                    <div class="text-center mb-8">
-                        <h3 class="text-3xl font-bold text-primary mb-4">📱 باقات إدارة مواقع التواصل الاجتماعي</h3>
-                        <button onclick="hidePackageDetails()" class="simple-btn simple-btn-outline">← العودة
-                            للباقات</button>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Package 1: الإشراقة -->
-                        <div class="package-card">
-                            <div class="text-center mb-6">
-                                <div class="service-icon mb-4">
-                                    <span class="text-2xl">✨</span>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">باقة الإشراقة</h4>
-                                <p class="text-gray-400 text-sm">البداية المثالية</p>
-                            </div>
-                            <div class="mb-6">
-                                <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
-                                <ul class="space-y-2 text-sm">
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>8 بوستات + 8 ستوري شهرياً</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>متابعة التعليقات والرسائل</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>تقرير شهري</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>إدارة الحملات الإعلانية</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mb-6 p-4 bg-primary/10 rounded-lg">
-                                <h5 class="font-bold text-primary mb-2">🎁 الميزة المجانية:</h5>
-                                <p class="text-sm text-gray-300">استشارة استراتيجية أول شهر</p>
-                            </div>
-                            <p class="text-gray-400 text-center mb-4 text-sm">مناسبة للشركات الصغيرة أو الأفراد الذين
-                                يرغبون بحضور رقمي محترف وبسيط</p>
-                            <button class="simple-btn w-full">اختر الباقة</button>
-                        </div>
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 creative-bg relative overflow-hidden">
+            <!-- Floating Icons -->
+            <div class="floating-icon text-6xl wiggle" onclick="this.style.animation='wiggle 0.5s ease-in-out'">🚀</div>
+            <div class="floating-icon text-6xl" onclick="this.style.animation='wiggle 0.5s ease-in-out'">✨</div>
+            <div class="floating-icon text-6xl" onclick="this.style.animation='wiggle 0.5s ease-in-out'">🎯</div>
+            <div class="floating-icon text-6xl" onclick="this.style.animation='wiggle 0.5s ease-in-out'">💡</div>
 
-                        <!-- Package 2: التوسع -->
-                        <div class="package-card featured">
-                            <div class="text-center mb-6">
-                                <div class="service-icon mb-4">
-                                    <span class="text-2xl">🚀</span>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">باقة التوسع</h4>
-                                <p class="text-gray-400 text-sm">الأكثر طلباً</p>
-                            </div>
-                            <div class="mb-6">
-                                <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
-                                <ul class="space-y-2 text-sm">
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>12 بوست + 12 ستوري شهرياً</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>جلسة تصوير منتجات شهرية (10 صور)</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>إدارة إعلانات</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mb-6 p-4 bg-secondary/10 rounded-lg">
-                                <h5 class="font-bold text-secondary mb-2">🎁 الميزة المجانية:</h5>
-                                <p class="text-sm text-gray-300">تصميم غرافيكي إضافي 3 تصاميم شهرياً</p>
-                            </div>
-                            <p class="text-gray-400 text-center mb-4 text-sm">للشركات التي تريد توسيع جمهورها وزيادة
-                                التفاعل</p>
-                            <button class="simple-btn w-full">اختر الباقة</button>
-                        </div>
-
-                        <!-- Package 3: التأثير -->
-                        <div class="package-card">
-                            <div class="text-center mb-6">
-                                <div class="service-icon mb-4">
-                                    <span class="text-2xl">💎</span>
-                                </div>
-                                <h4 class="text-xl font-bold text-primary">باقة التأثير</h4>
-                                <p class="text-gray-400 text-sm">للعلامات المتميزة</p>
-                            </div>
-                            <div class="mb-6">
-                                <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
-                                <ul class="space-y-2 text-sm">
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>16 بوست + 16 ستوري شهرياً</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>جلسة تصوير + فيديو قصير</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>إدارة الحملات الإعلانية</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-primary">✓</span>
-                                        <span>تقرير تحليلي متقدم</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mb-6 p-4 bg-accent/10 rounded-lg">
-                                <h5 class="font-bold text-accent mb-2">🎁 الميزة المجانية:</h5>
-                                <p class="text-sm text-gray-300">تحليل رقمي شامل + تقرير شهري مفصل</p>
-                            </div>
-                            <p class="text-gray-400 text-center mb-4 text-sm">للعلامات التجارية التي تبحث عن حضور قوي
-                                وتحليل أداء متقدم</p>
-                            <button class="simple-btn w-full">اختر الباقة</button>
-                        </div>
-                    </div>
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">من نحن؟</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                        في حنّا غير، نؤمن أن لكل علامة تجارية قصة تستحق أن تُروى بأجمل صورة
+                    </p>
                 </div>
 
-                <!-- Photography Package -->
-                <div id="photography-packages" class="package-section hidden">
-                    <div class="text-center mb-8">
-                        <h3 class="text-3xl font-bold text-secondary mb-4">📸 باقات التصوير والإعلانات</h3>
-                        <button onclick="hidePackageDetails()" class="simple-btn simple-btn-outline">← العودة
-                            للباقات</button>
-                    </div>
-                    <div class="max-w-2xl mx-auto">
-                        <div class="package-card">
-                            <div class="text-center mb-6">
-                                <div class="service-icon mb-4">
-                                    <span class="text-2xl">🏆</span>
+                <div class="about-timeline fade-in">
+                    <!-- Story Item -->
+                    <div class="timeline-item  wow animate__animated animate__fadeInLeft">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="text-2xl font-bold text-primary mb-4">📖 قصتنا</h3>
+                            <div class="expandable-text" data-id="about-story">
+                                <div class="text-preview">
+                                    <p class="text-gray-300 leading-relaxed">
+                                        في حنّا غير، نؤمن أن لكل علامة تجارية قصة تستحق أن تُروى بأجمل صورة، وأن لكل
+                                        مناسبة
+                                        لمسة خاصة تجعلها ذكرى خالدة...
+                                    </p>
                                 </div>
-                                <h4 class="text-2xl font-bold text-secondary">الباقة الذهبية</h4>
-                                <p class="text-gray-400 text-sm">تصوير احترافي متميز</p>
+                                <div class="text-full hidden">
+                                    <p class="text-gray-300 leading-relaxed mb-4">
+                                        في حنّا غير، نؤمن أن لكل علامة تجارية قصة تستحق أن تُروى بأجمل صورة، وأن لكل
+                                        مناسبة
+                                        لمسة خاصة تجعلها ذكرى خالدة، نحن منصة سعودية متخصصة في إدارة مواقع التواصل
+                                        الاجتماعي، إنتاج المحتوى الإبداعي، التصوير الإعلاني وتصوير المنتجات، بالإضافة
+                                        إلى
+                                        تنظيم وإدارة الفعاليات والحفلات بكافة أنواعها.
+                                    </p>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        فريقنا يمزج بين الإبداع والخبرة لنقدم لك حلولًا تسويقية متكاملة ترتقي بحضورك
+                                        وتساعدك
+                                        على الوصول لجمهورك وتحقيق أهدافك.
+                                    </p>
+                                </div>
+                                <button onclick="toggleText('about-story')" class="read-more-btn">
+                                    <span class="btn-text">اكتشف قصتنا كاملة</span>
+                                    <span class="btn-icon">📖</span>
+                                </button>
                             </div>
-                            <div class="mb-6">
-                                <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
-                                <ul class="space-y-3 text-sm">
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-secondary">✓</span>
-                                        <span>جلسة تصوير حتى 10 منتجات</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-secondary">✓</span>
-                                        <span>صور معدلة باحترافية عالية</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mb-6 p-4 bg-secondary/10 rounded-lg">
-                                <h5 class="font-bold text-secondary mb-2">🎁 الميزة المجانية:</h5>
-                                <p class="text-sm text-gray-300">تصميم منشور واحد للسوشال ميديا</p>
-                            </div>
-                            <button class="simple-btn w-full">احجز الآن</button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Events Package -->
-                <div id="events-packages" class="package-section hidden">
-                    <div class="text-center mb-8">
-                        <h3 class="text-3xl font-bold text-accent mb-4">🎉 باقات الفعاليات والاحتفالات</h3>
-                        <button onclick="hidePackageDetails()" class="simple-btn simple-btn-outline">← العودة
-                            للباقات</button>
-                    </div>
-                    <div class="max-w-2xl mx-auto">
-                        <div class="package-card">
-                            <div class="text-center mb-6">
-                                <div class="service-icon mb-4">
-                                    <span class="text-2xl">🎊</span>
-                                </div>
-                                <h4 class="text-2xl font-bold text-accent">باقة البهجة</h4>
-                                <p class="text-gray-400 text-sm">فعاليات استثنائية</p>
-                            </div>
-                            <div class="mb-6">
-                                <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
-                                <ul class="space-y-3 text-sm">
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-accent">✓</span>
-                                        <span>للفعاليات من 30-100 شخص</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-accent">✓</span>
-                                        <span>تنظيم فعاليات + تخطيط كامل</span>
-                                    </li>
-                                    <li class="flex items-center space-x-2 space-x-reverse">
-                                        <span class="text-accent">✓</span>
-                                        <span>تنسيق الموردين</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="mb-6 p-4 bg-accent/10 rounded-lg">
-                                <h5 class="font-bold text-accent mb-2">🎁 الميزة المجانية:</h5>
-                                <p class="text-sm text-gray-300">تصميم هوية بصرية للحدث</p>
-                            </div>
-                            <p class="text-gray-400 text-center mb-4 text-sm">مناسبة للحفلات والمؤتمرات الصغيرة للمتوسطة
+                    <!-- Vision Item -->
+                    <div class="timeline-item  wow animate__animated animate__fadeInRight">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="text-2xl font-bold text-secondary mb-4">🎯 رؤيتنا</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                أن نكون الخيار الأول في السعودية لكل من يبحث عن شريك تسويقي مبدع، يحوّل الأفكار إلى
+                                نجاحات
+                                ملموسة، والمناسبات إلى لحظات استثنائية.
                             </p>
-                            <button class="simple-btn w-full">خطط فعاليتك</button>
+                        </div>
+                    </div>
+
+                    <!-- Values Item -->
+                    <div class="timeline-item wow animate__animated animate__fadeInLeft">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="text-2xl font-bold text-accent mb-4">💎 قيمنا</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-3xl mb-2">🎨</div>
+                                    <h4 class="font-bold text-primary">الإبداع</h4>
+                                    <p class="text-sm text-gray-400">نبتكر حلولاً مميزة</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl mb-2">⚡</div>
+                                    <h4 class="font-bold text-secondary">السرعة</h4>
+                                    <p class="text-sm text-gray-400">تنفيذ سريع وفعال</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl mb-2">🤝</div>
+                                    <h4 class="font-bold text-accent">الشراكة</h4>
+                                    <p class="text-sm text-gray-400">نعمل معك كشريك</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl mb-2">🏆</div>
+                                    <h4 class="font-bold text-primary">التميز</h4>
+                                    <p class="text-sm text-gray-400">نسعى للأفضل دائماً</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Fikra Section -->
-    <section id="fikra" class="py-20 px-6 bg-darker/50 relative overflow-hidden">
-        <!-- Background Animation Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="floating-icon text-6xl" style="top: 15%; right: 10%; animation-delay: 0s;">💡</div>
-            <div class="floating-icon text-6xl" style="top: 70%; left: 15%; animation-delay: 2s;">✨</div>
-            <div class="floating-icon text-6xl" style="bottom: 25%; right: 25%; animation-delay: 1s;">🎯</div>
-        </div>
+        <!-- Services Section -->
+        <section id="services" class="py-20 px-6 bg-darker/50 relative overflow-hidden">
+            <!-- Background Animation Elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="floating-icon text-6xl" style="top: 10%; right: 15%; animation-delay: 0s;">🚀</div>
+                <div class="floating-icon text-6xl" style="top: 60%; left: 10%; animation-delay: 2s;">✨</div>
+                <div class="floating-icon text-6xl" style="bottom: 20%; right: 20%; animation-delay: 1s;">🎯</div>
+            </div>
 
-        <div class="max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">فكرة</h2>
-                <div class="simple-card p-8 max-w-4xl mx-auto">
-                    <div class="expandable-text" data-id="fikra-intro">
-                        <div class="text-preview">
-                            <p class="text-lg text-gray-300 leading-relaxed">
-                                في حنّا غير، نؤمن أن كل نجاح يبدأ بفكرة، ومن هنا أطلقنا خدمة "فكرة"، مشروع يترجم إبداعك
-                                إلى خطوات عملية واضحة...
-                            </p>
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">خدماتنا</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                        نقدم مجموعة شاملة من الخدمات التسويقية المبتكرة لتحقيق أهدافك
+                    </p>
+                </div>
+
+                <!-- Services Preview -->
+                <div class="expandable-text" data-id="services-section">
+                    <div class="text-preview">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
+                            <!-- Service 1 -->
+                            <div
+                                class="simple-card p-8 text-center group hover:border-primary/50 transition-all duration-300 gentle-hover wow animate__animated animate__bounceIn">
+                                <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500">
+                                    <svg fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        <circle cx="12" cy="8" r="2" />
+                                        <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                    📱
+                                    إدارة السوشيال ميديا</h3>
+                                <p class="text-gray-400 text-sm">إدارة شاملة لحساباتك</p>
+                            </div>
+
+                            <!-- Service 2 -->
+                            <div
+                                class="simple-card p-8 text-center group hover:border-secondary/50 transition-all duration-300 gentle-hover wow animate__animated animate__bounceIn">
+                                <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
+                                    style="background: linear-gradient(45deg, #aed684, #6ee7b7);">
+                                    <svg fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">
+                                    ✨
+                                    إنتاج المحتوى</h3>
+                                <p class="text-gray-400 text-sm">محتوى إبداعي مميز</p>
+                            </div>
+
+                            <!-- Service 3 -->
+                            <div
+                                class="simple-card p-8 text-center group hover:border-accent/50 transition-all duration-300 gentle-hover wow animate__animated animate__bounceIn">
+                                <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
+                                    style="background: linear-gradient(45deg, #6ee7b7, #34d399);">
+                                    <svg fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 2l3 6 6 1-4.5 4.5L15 20l-6-3-6 3 1.5-6.5L0 9l6-1 3-6z" />
+                                        <circle cx="12" cy="12" r="8" />
+                                        <path d="M12 6v6l4 2" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                                    📸
+                                    تصوير المنتجات</h3>
+                                <p class="text-gray-400 text-sm">صور احترافية مميزة</p>
+                            </div>
                         </div>
-                        <div class="text-full hidden">
-                            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                                في حنّا غير، نؤمن أن كل نجاح يبدأ بفكرة، ومن هنا أطلقنا خدمة "فكرة"، مشروع يترجم إبداعك
-                                إلى خطوات عملية واضحة.
-                            </p>
-                            <p class="text-gray-300 leading-relaxed mb-6">
-                                "فكرة" هي نقطة الانطلاق لأي علامة تجارية أو مناسبة، ومنها تنبثق مجموعة من الخدمات
-                                المصممة بعناية لتلبي احتياجاتك التسويقية:
-                            </p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                                <div class="simple-card p-4 bg-primary/10">
-                                    <h4 class="font-bold text-primary mb-2">🎨 الهوية البصرية</h4>
-                                    <p class="text-sm text-gray-300">رسم صورة متكاملة تعكس شخصية علامتك</p>
-                                </div>
-                                <div class="simple-card p-4 bg-secondary/10">
-                                    <h4 class="font-bold text-secondary mb-2">📸 جلسة تصوير</h4>
-                                    <p class="text-sm text-gray-300">صور وفيديوهات تنقل جمال منتجك</p>
-                                </div>
-                                <div class="simple-card p-4 bg-accent/10">
-                                    <h4 class="font-bold text-accent mb-2">📱 منشور</h4>
-                                    <p class="text-sm text-gray-300">محتوى إبداعي مصمم بعناية</p>
-                                </div>
-                                <div class="simple-card p-4 bg-primary/10">
-                                    <h4 class="font-bold text-primary mb-2">🎬 فيديو موشن</h4>
-                                    <p class="text-sm text-gray-300">فيديوهات متحركة جذابة</p>
-                                </div>
-                                <div class="simple-card p-4 bg-secondary/10">
-                                    <h4 class="font-bold text-secondary mb-2">📹 فيديو قصير</h4>
-                                    <p class="text-sm text-gray-300">محتوى قصير مواكب للترند</p>
-                                </div>
-                                <div class="simple-card p-4 bg-accent/10">
-                                    <h4 class="font-bold text-accent mb-2">📊 خطة تسويقية</h4>
-                                    <p class="text-sm text-gray-300">استراتيجية شاملة للنجاح</p>
+                    </div>
+
+                    <div class="text-full hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
+                            <!-- Service 1 -->
+                            <div class="service-card">
+                                <div class="service-card-inner">
+                                    <div class="service-card-front">
+                                        <div class="service-icon-enhanced">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                                                <path
+                                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                                <circle cx="12" cy="8" r="2" />
+                                                <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                            </svg>
+                                            <div class="service-glow"></div>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-2">إدارة السوشيال ميديا</h3>
+                                        <p class="text-gray-300 text-sm">إدارة شاملة لحساباتك</p>
+                                        <div class="service-arrow">↻</div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <h3 class="text-xl font-bold text-primary mb-4">إدارة السوشيال ميديا</h3>
+                                        <ul class="text-sm text-gray-300 space-y-2 text-right">
+                                            <li>• وضع استراتيجية المحتوى</li>
+                                            <li>• النشر والمتابعة اليومية</li>
+                                            <li>• التفاعل مع الجمهور</li>
+                                            <li>• تحليل الأداء والتقارير</li>
+                                            <li>• إدارة الحملات الإعلانية</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="text-lg text-gray-300 leading-relaxed font-bold">
-                                مع "فكرة"، نرافقك من الشرارة الأولى وحتى التنفيذ الكامل، لتكون قصتك دائمًا غير.
-                            </p>
+
+                            <!-- Service 2 -->
+                            <div class="service-card">
+                                <div class="service-card-inner">
+                                    <div class="service-card-front">
+                                        <div class="service-icon-enhanced">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                                                <path
+                                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                            <div class="service-glow"></div>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-2">إنتاج المحتوى</h3>
+                                        <p class="text-gray-300 text-sm">محتوى إبداعي مميز</p>
+                                        <div class="service-arrow">↻</div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <h3 class="text-xl font-bold text-primary mb-4">إنتاج المحتوى الإبداعي</h3>
+                                        <ul class="text-sm text-gray-300 space-y-2 text-right">
+                                            <li>• كتابة المحتوى التسويقي</li>
+                                            <li>• تصميم المنشورات</li>
+                                            <li>• إنتاج الفيديوهات القصيرة</li>
+                                            <li>• التصوير الفوتوغرافي</li>
+                                            <li>• المحتوى التفاعلي</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 3 -->
+                            <div class="service-card">
+                                <div class="service-card-inner">
+                                    <div class="service-card-front">
+                                        <div class="service-icon-enhanced">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                                                <path d="M9 2l3 6 6 1-4.5 4.5L15 20l-6-3-6 3 1.5-6.5L0 9l6-1 3-6z" />
+                                                <circle cx="12" cy="12" r="8" />
+                                                <path d="M12 6v6l4 2" />
+                                            </svg>
+                                            <div class="service-glow"></div>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-2">تصوير المنتجات</h3>
+                                        <p class="text-gray-300 text-sm">صور احترافية مميزة</p>
+                                        <div class="service-arrow">↻</div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <h3 class="text-xl font-bold text-primary mb-4">التصوير الاحترافي</h3>
+                                        <ul class="text-sm text-gray-300 space-y-2 text-right">
+                                            <li>• تصوير المنتجات</li>
+                                            <li>• التصوير الإعلاني</li>
+                                            <li>• جلسات التصوير الشخصية</li>
+                                            <li>• تصوير الفعاليات</li>
+                                            <li>• المعالجة والتحرير</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 4 -->
+                            <div class="service-card">
+                                <div class="service-card-inner">
+                                    <div class="service-card-front">
+                                        <div class="service-icon-enhanced">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                                                <path
+                                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                                            </svg>
+                                            <div class="service-glow"></div>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-2">تنظيم الفعاليات</h3>
+                                        <p class="text-gray-300 text-sm">فعاليات استثنائية</p>
+                                        <div class="service-arrow">↻</div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <h3 class="text-xl font-bold text-primary mb-4">تنظيم الفعاليات</h3>
+                                        <ul class="text-sm text-gray-300 space-y-2 text-right">
+                                            <li>• التخطيط والتنظيم</li>
+                                            <li>• إدارة الحفلات</li>
+                                            <li>• المؤتمرات والندوات</li>
+                                            <li>• الفعاليات التجارية</li>
+                                            <li>• المتابعة والتنسيق</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 5 -->
+                            <div class="service-card">
+                                <div class="service-card-inner">
+                                    <div class="service-card-front">
+                                        <div class="service-icon-enhanced">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                                                <path
+                                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                <path d="M9 11H7v8h2v-8zm4 0h-2v8h2v-8zm4 0h-2v8h2v-8z" />
+                                                <circle cx="12" cy="4" r="2" />
+                                            </svg>
+                                            <div class="service-glow"></div>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-2">التصميم الجرافيكي</h3>
+                                        <p class="text-gray-300 text-sm">تصاميم إبداعية</p>
+                                        <div class="service-arrow">↻</div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <h3 class="text-xl font-bold text-primary mb-4">التصميم الجرافيكي</h3>
+                                        <ul class="text-sm text-gray-300 space-y-2 text-right">
+                                            <li>• تصميم الهوية البصرية</li>
+                                            <li>• تصميم المطبوعات</li>
+                                            <li>• تصميم المنشورات</li>
+                                            <li>• تصميم البروشورات</li>
+                                            <li>• التصاميم الرقمية</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 6 -->
+                            <div class="service-card">
+                                <div class="service-card-inner">
+                                    <div class="service-card-front">
+                                        <div class="service-icon-enhanced">
+                                            <svg fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                                                <path
+                                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                                <path d="M12 6l1.5 3h3.5l-2.5 2 1 3.5-3-2-3 2 1-3.5-2.5-2h3.5z" />
+                                            </svg>
+                                            <div class="service-glow"></div>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-white mb-2">الحملات الإعلانية</h3>
+                                        <p class="text-gray-300 text-sm">إعلانات فعّالة</p>
+                                        <div class="service-arrow">↻</div>
+                                    </div>
+                                    <div class="service-card-back">
+                                        <h3 class="text-xl font-bold text-primary mb-4">الحملات الإعلانية</h3>
+                                        <ul class="text-sm text-gray-300 space-y-2 text-right">
+                                            <li>• إعلانات فيسبوك وإنستغرام</li>
+                                            <li>• إعلانات جوجل</li>
+                                            <li>• إعلانات سناب شات</li>
+                                            <li>• إعلانات تيك توك</li>
+                                            <li>• تحليل وتحسين الأداء</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <button onclick="toggleText('fikra-intro')" class="read-more-btn">
-                            <span class="btn-text">اكتشف المزيد</span>
-                            <span class="btn-icon">💡</span>
+                    </div>
+
+                    <div class="text-center mt-12">
+                        <button onclick="toggleText('services-section')" class="read-more-btn">
+                            <span class="btn-text">🔍 اكتشف خدماتنا كاملة</span>
+                            <span class="btn-icon">🚀</span>
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Packages Section -->
+        <section id="packages" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">باقاتنا</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                        اختر الباقة التي تناسب احتياجاتك وميزانيتك
+                    </p>
+                </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 flex justify-center items-center min-h-screen">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">تواصل معنا</h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                    هل لديك مشروع في ذهنك؟ دعنا نساعدك في تحويله إلى واقع مبهر. فريقنا جاهز للاستماع إليك وتقديم
-                    الاستشارة المناسبة لاحتياجاتك.
-                </p>
-            </div>
+                <!-- Package Categories -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 fade-in">
+                    <!-- Social Media Category -->
+                    <div class="simple-card p-8 text-center group hover:border-primary/50 transition-all duration-300 cursor-pointer"
+                        onclick="showPackageDetails('social-media')">
+                        <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                <circle cx="12" cy="8" r="2" />
+                                <path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">📱
+                            إدارة
+                            السوشيال ميديا</h3>
+                        <p class="text-gray-400 text-sm mb-4">3 باقات متنوعة</p>
+                        <div class="simple-btn simple-btn-outline w-full">اكتشف الباقات</div>
+                    </div>
 
-            <div class="grid grid-cols-1 gap-12 justify-center">
-                <!-- Contact Info -->
-                <div class="fade-in">
-                    <div class="space-y-8">
-                        <!-- Social Media -->
-                        <div class="simple-card p-8">
-                            <div class="text-center mb-8">
-                                <h3 class="text-2xl font-bold text-white mb-3">🌟 تابعنا على وسائل التواصل</h3>
-                                <p class="text-gray-400">ابق على تواصل معنا واكتشف آخر أعمالنا وأخبارنا</p>
-                            </div>
+                    <!-- Photography Category -->
+                    <div class="simple-card p-8 text-center group hover:border-secondary/50 transition-all duration-300 cursor-pointer"
+                        onclick="showPackageDetails('photography')">
+                        <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
+                            style="background: linear-gradient(45deg, #aed684, #6ee7b7);">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 2l3 6 6 1-4.5 4.5L15 20l-6-3-6 3 1.5-6.5L0 9l6-1 3-6z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">📸
+                            التصوير والإعلانات</h3>
+                        <p class="text-gray-400 text-sm mb-4">باقة احترافية</p>
+                        <div class="simple-btn simple-btn-outline w-full">اكتشف الباقة</div>
+                    </div>
 
-                            <!-- Primary Contact Methods -->
-                            <div class="mb-8">
-                                <h4 class="text-lg font-bold text-primary mb-4 text-center">📞 تواصل مباشر</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <!-- واتساب -->
-                                    <a href="https://wa.me/966591364139"
-                                        class="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25 flex items-center space-x-4 space-x-reverse">
-                                        <div
-                                            class="bg-white/20 rounded-full p-3 group-hover:bg-white/30 transition-all duration-300">
-                                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                                <path
-                                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
-                                            </svg>
-                                        </div>
-                                        <div class="flex-1">
-                                            <h5 class="text-white font-bold text-lg">واتساب</h5>
-                                            <p class="text-green-100 text-sm">تواصل فوري ومباشر</p>
-                                        </div>
-                                        <div class="text-white/70 group-hover:text-white transition-colors">
-                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                            </svg>
-                                        </div>
-                                    </a>
+                    <!-- Events Category -->
+                    <div class="simple-card p-8 text-center group hover:border-accent/50 transition-all duration-300 cursor-pointer"
+                        onclick="showPackageDetails('events')">
+                        <div class="unified-icon mb-6 group-hover:scale-110 transition-transform duration-500"
+                            style="background: linear-gradient(45deg, #6ee7b7, #34d399);">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">🎉
+                            الفعاليات
+                            والاحتفالات</h3>
+                        <p class="text-gray-400 text-sm mb-4">باقة شاملة</p>
+                        <div class="simple-btn simple-btn-outline w-full">اكتشف الباقة</div>
+                    </div>
+                </div>
 
-                                    <!-- إيميل -->
-                                    <a href="mailto:info@hannaghair.com"
-                                        class="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 flex items-center space-x-4 space-x-reverse">
-                                        <div
-                                            class="bg-white/20 rounded-full p-3 group-hover:bg-white/30 transition-all duration-300">
-                                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                                <path
-                                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                            </svg>
-                                        </div>
-                                        <div class="flex-1">
-                                            <h5 class="text-white font-bold text-lg">البريد الإلكتروني</h5>
-                                            <p class="text-red-100 text-sm">للاستفسارات الرسمية</p>
-                                        </div>
-                                        <div class="text-white/70 group-hover:text-white transition-colors">
-                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Social Media Platforms -->
-                            <div>
-                                <h4 class="text-lg font-bold text-secondary mb-4 text-center mt-4">📱 منصات التواصل
-                                    الاجتماعي
-                                </h4>
-                                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
-                                    <!-- انستغرام -->
-                                    <a href="https://www.instagram.com/hannaghayr?igsh=MXVpNXoydWJzZXJ2Yg%3D%3D&utm_source=qr"
-                                        class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- فيسبوك -->
-                                    <a href="https://facebook.com/hannaghair"
-                                        class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- تويتر X -->
-                                    <a href="https://x.com/hannaghayr?s=21"
-                                        class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- لينكد إن -->
-                                    <a href="https://linkedin.com/company/hannaghair"
-                                        class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- سناب شات -->
-                                    <a href="https://snapchat.com/add/hannaghayr"
-                                        class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.404-5.958 1.404-5.958s-.359-.719-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-12.013C24.007 5.367 18.641.001.017.001z" />
-                                        </svg>
-                                    </a>
-
-                                    <!-- تيك توك -->
-                                    <a href="https://www.tiktok.com/@hanna.ghayr?_t=ZS-8zX1XCs9Oop&_r=1"
-                                        class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div
-                                class="mx-auto mt-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl border border-primary/20 max-w-md">
-                                <div class="p-6 rounded-2xl">
-                                    <h3 class="text-xl font-bold text-white mb-6 text-center">📞 معلومات التواصل</h3>
-                                    <div class="space-y-4">
-                                        <div class="flex items-center space-x-4 space-x-reverse">
-                                            <div
-                                                class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                                                <span class="text-dark text-xl">📱</span>
-                                            </div>
-                                            <div>
-                                                <p class="text-white font-bold">الهاتف</p>
-                                                <p class="text-gray-400">0591364139</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center space-x-4 space-x-reverse">
-                                            <div
-                                                class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                                                <span class="text-dark text-xl">✉️</span>
-                                            </div>
-                                            <div>
-                                                <p class="text-white font-bold">البريد الإلكتروني</p>
-                                                <p class="text-gray-400">info@hannaghair.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center space-x-4 space-x-reverse">
-                                            <div
-                                                class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                                                <span class="text-dark text-xl">📍</span>
-                                            </div>
-                                            <div>
-                                                <p class="text-white font-bold">الموقع</p>
-                                                <p class="text-gray-400">الطائف، المملكة العربية السعودية</p>
-                                            </div>
-                                        </div>
+                <!-- Package Details Container -->
+                <div id="package-details" class="hidden">
+                    <!-- Social Media Packages -->
+                    <div id="social-media-packages" class="package-section hidden">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-primary mb-4">📱 باقات إدارة مواقع التواصل الاجتماعي</h3>
+                            <button onclick="hidePackageDetails()" class="simple-btn simple-btn-outline">← العودة
+                                للباقات</button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Package 1: الإشراقة -->
+                            <div class="package-card">
+                                <div class="text-center mb-6">
+                                    <div class="service-icon mb-4">
+                                        <span class="text-2xl">✨</span>
                                     </div>
+                                    <h4 class="text-xl font-bold text-primary">باقة الإشراقة</h4>
+                                    <p class="text-gray-400 text-sm">البداية المثالية</p>
                                 </div>
+                                <div class="mb-6">
+                                    <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>8 بوستات + 8 ستوري شهرياً</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>متابعة التعليقات والرسائل</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>تقرير شهري</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>إدارة الحملات الإعلانية</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-6 p-4 bg-primary/10 rounded-lg">
+                                    <h5 class="font-bold text-primary mb-2">🎁 الميزة المجانية:</h5>
+                                    <p class="text-sm text-gray-300">استشارة استراتيجية أول شهر</p>
+                                </div>
+                                <p class="text-gray-400 text-center mb-4 text-sm">مناسبة للشركات الصغيرة أو الأفراد
+                                    الذين
+                                    يرغبون بحضور رقمي محترف وبسيط</p>
+                                <button class="simple-btn w-full">اختر الباقة</button>
                             </div>
 
+                            <!-- Package 2: التوسع -->
+                            <div class="package-card featured">
+                                <div class="text-center mb-6">
+                                    <div class="service-icon mb-4">
+                                        <span class="text-2xl">🚀</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-primary">باقة التوسع</h4>
+                                    <p class="text-gray-400 text-sm">الأكثر طلباً</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>12 بوست + 12 ستوري شهرياً</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>جلسة تصوير منتجات شهرية (10 صور)</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>إدارة إعلانات</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-6 p-4 bg-secondary/10 rounded-lg">
+                                    <h5 class="font-bold text-secondary mb-2">🎁 الميزة المجانية:</h5>
+                                    <p class="text-sm text-gray-300">تصميم غرافيكي إضافي 3 تصاميم شهرياً</p>
+                                </div>
+                                <p class="text-gray-400 text-center mb-4 text-sm">للشركات التي تريد توسيع جمهورها وزيادة
+                                    التفاعل</p>
+                                <button class="simple-btn w-full">اختر الباقة</button>
+                            </div>
 
+                            <!-- Package 3: التأثير -->
+                            <div class="package-card">
+                                <div class="text-center mb-6">
+                                    <div class="service-icon mb-4">
+                                        <span class="text-2xl">💎</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-primary">باقة التأثير</h4>
+                                    <p class="text-gray-400 text-sm">للعلامات المتميزة</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>16 بوست + 16 ستوري شهرياً</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>جلسة تصوير + فيديو قصير</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>إدارة الحملات الإعلانية</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-primary">✓</span>
+                                            <span>تقرير تحليلي متقدم</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-6 p-4 bg-accent/10 rounded-lg">
+                                    <h5 class="font-bold text-accent mb-2">🎁 الميزة المجانية:</h5>
+                                    <p class="text-sm text-gray-300">تحليل رقمي شامل + تقرير شهري مفصل</p>
+                                </div>
+                                <p class="text-gray-400 text-center mb-4 text-sm">للعلامات التجارية التي تبحث عن حضور
+                                    قوي
+                                    وتحليل أداء متقدم</p>
+                                <button class="simple-btn w-full">اختر الباقة</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photography Package -->
+                    <div id="photography-packages" class="package-section hidden">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-secondary mb-4">📸 باقات التصوير والإعلانات</h3>
+                            <button onclick="hidePackageDetails()" class="simple-btn simple-btn-outline">← العودة
+                                للباقات</button>
+                        </div>
+                        <div class="max-w-2xl mx-auto">
+                            <div class="package-card">
+                                <div class="text-center mb-6">
+                                    <div class="service-icon mb-4">
+                                        <span class="text-2xl">🏆</span>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-secondary">الباقة الذهبية</h4>
+                                    <p class="text-gray-400 text-sm">تصوير احترافي متميز</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-secondary">✓</span>
+                                            <span>جلسة تصوير حتى 10 منتجات</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-secondary">✓</span>
+                                            <span>صور معدلة باحترافية عالية</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-6 p-4 bg-secondary/10 rounded-lg">
+                                    <h5 class="font-bold text-secondary mb-2">🎁 الميزة المجانية:</h5>
+                                    <p class="text-sm text-gray-300">تصميم منشور واحد للسوشال ميديا</p>
+                                </div>
+                                <button class="simple-btn w-full">احجز الآن</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Events Package -->
+                    <div id="events-packages" class="package-section hidden">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-accent mb-4">🎉 باقات الفعاليات والاحتفالات</h3>
+                            <button onclick="hidePackageDetails()" class="simple-btn simple-btn-outline">← العودة
+                                للباقات</button>
+                        </div>
+                        <div class="max-w-2xl mx-auto">
+                            <div class="package-card">
+                                <div class="text-center mb-6">
+                                    <div class="service-icon mb-4">
+                                        <span class="text-2xl">🎊</span>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-accent">باقة البهجة</h4>
+                                    <p class="text-gray-400 text-sm">فعاليات استثنائية</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h5 class="font-bold text-white mb-3">📋 المحتوى:</h5>
+                                    <ul class="space-y-3 text-sm">
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-accent">✓</span>
+                                            <span>للفعاليات من 30-100 شخص</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-accent">✓</span>
+                                            <span>تنظيم فعاليات + تخطيط كامل</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2 space-x-reverse">
+                                            <span class="text-accent">✓</span>
+                                            <span>تنسيق الموردين</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-6 p-4 bg-accent/10 rounded-lg">
+                                    <h5 class="font-bold text-accent mb-2">🎁 الميزة المجانية:</h5>
+                                    <p class="text-sm text-gray-300">تصميم هوية بصرية للحدث</p>
+                                </div>
+                                <p class="text-gray-400 text-center mb-4 text-sm">مناسبة للحفلات والمؤتمرات الصغيرة
+                                    للمتوسطة
+                                </p>
+                                <button class="simple-btn w-full">خطط فعاليتك</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Modal -->
-    <div id="modal"
-        class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
-        <div class="simple-card max-w-2xl w-full max-h-[80vh] overflow-y-auto transform scale-95 transition-all duration-300"
-            id="modal-content">
-            <div class="p-8">
-                <div class="flex justify-between items-center mb-6 pb-4 border-b border-primary/20">
-                    <h3 id="modal-title" class="text-2xl font-bold text-primary"></h3>
-                    <button onclick="closeModal()" class="text-gray-400 hover:text-white text-2xl transition-colors">
-                        ✕
-                    </button>
+        <!-- Fikra Section -->
+        <section id="fikra" class="py-20 px-6 bg-darker/50 relative overflow-hidden">
+            <!-- Background Animation Elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="floating-icon text-6xl" style="top: 15%; right: 10%; animation-delay: 0s;">💡</div>
+                <div class="floating-icon text-6xl" style="top: 70%; left: 15%; animation-delay: 2s;">✨</div>
+                <div class="floating-icon text-6xl" style="bottom: 25%; right: 25%; animation-delay: 1s;">🎯</div>
+            </div>
+
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">فكرة</h2>
+                    <div class="simple-card p-8 max-w-4xl mx-auto">
+                        <div class="expandable-text" data-id="fikra-intro">
+                            <div class="text-preview">
+                                <p class="text-lg text-gray-300 leading-relaxed">
+                                    في حنّا غير، نؤمن أن كل نجاح يبدأ بفكرة، ومن هنا أطلقنا خدمة "فكرة"، مشروع يترجم
+                                    إبداعك
+                                    إلى خطوات عملية واضحة...
+                                </p>
+                            </div>
+                            <div class="text-full hidden">
+                                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                                    في حنّا غير، نؤمن أن كل نجاح يبدأ بفكرة، ومن هنا أطلقنا خدمة "فكرة"، مشروع يترجم
+                                    إبداعك
+                                    إلى خطوات عملية واضحة.
+                                </p>
+                                <p class="text-gray-300 leading-relaxed mb-6">
+                                    "فكرة" هي نقطة الانطلاق لأي علامة تجارية أو مناسبة، ومنها تنبثق مجموعة من الخدمات
+                                    المصممة بعناية لتلبي احتياجاتك التسويقية:
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                                    <div class="simple-card p-4 bg-primary/10">
+                                        <h4 class="font-bold text-primary mb-2">🎨 الهوية البصرية</h4>
+                                        <p class="text-sm text-gray-300">رسم صورة متكاملة تعكس شخصية علامتك</p>
+                                    </div>
+                                    <div class="simple-card p-4 bg-secondary/10">
+                                        <h4 class="font-bold text-secondary mb-2">📸 جلسة تصوير</h4>
+                                        <p class="text-sm text-gray-300">صور وفيديوهات تنقل جمال منتجك</p>
+                                    </div>
+                                    <div class="simple-card p-4 bg-accent/10">
+                                        <h4 class="font-bold text-accent mb-2">📱 منشور</h4>
+                                        <p class="text-sm text-gray-300">محتوى إبداعي مصمم بعناية</p>
+                                    </div>
+                                    <div class="simple-card p-4 bg-primary/10">
+                                        <h4 class="font-bold text-primary mb-2">🎬 فيديو موشن</h4>
+                                        <p class="text-sm text-gray-300">فيديوهات متحركة جذابة</p>
+                                    </div>
+                                    <div class="simple-card p-4 bg-secondary/10">
+                                        <h4 class="font-bold text-secondary mb-2">📹 فيديو قصير</h4>
+                                        <p class="text-sm text-gray-300">محتوى قصير مواكب للترند</p>
+                                    </div>
+                                    <div class="simple-card p-4 bg-accent/10">
+                                        <h4 class="font-bold text-accent mb-2">📊 خطة تسويقية</h4>
+                                        <p class="text-sm text-gray-300">استراتيجية شاملة للنجاح</p>
+                                    </div>
+                                </div>
+                                <p class="text-lg text-gray-300 leading-relaxed font-bold">
+                                    مع "فكرة"، نرافقك من الشرارة الأولى وحتى التنفيذ الكامل، لتكون قصتك دائمًا غير.
+                                </p>
+                            </div>
+                            <button onclick="toggleText('fikra-intro')" class="read-more-btn">
+                                <span class="btn-text">اكتشف المزيد</span>
+                                <span class="btn-icon">💡</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div id="modal-body" class="text-gray-300 leading-relaxed">
-                    <!-- Modal content will be inserted here -->
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 flex justify-center items-center min-h-screen">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 hero-title">تواصل معنا</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                        هل لديك مشروع في ذهنك؟ دعنا نساعدك في تحويله إلى واقع مبهر. فريقنا جاهز للاستماع إليك وتقديم
+                        الاستشارة المناسبة لاحتياجاتك.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-12 justify-center">
+                    <!-- Contact Info -->
+                    <div class="fade-in">
+                        <div class="space-y-8">
+                            <!-- Social Media -->
+                            <div class="simple-card p-8">
+                                <div class="text-center mb-8">
+                                    <h3 class="text-2xl font-bold text-white mb-3">🌟 تابعنا على وسائل التواصل</h3>
+                                    <p class="text-gray-400">ابق على تواصل معنا واكتشف آخر أعمالنا وأخبارنا</p>
+                                </div>
+
+                                <!-- Primary Contact Methods -->
+                                <div class="mb-8">
+                                    <h4 class="text-lg font-bold text-primary mb-4 text-center">📞 تواصل مباشر</h4>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <!-- واتساب -->
+                                        <a href="https://wa.me/966591364139"
+                                            class="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25 flex items-center space-x-4 space-x-reverse">
+                                            <div
+                                                class="bg-white/20 rounded-full p-3 group-hover:bg-white/30 transition-all duration-300">
+                                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h5 class="text-white font-bold text-lg">واتساب</h5>
+                                                <p class="text-green-100 text-sm">تواصل فوري ومباشر</p>
+                                            </div>
+                                            <div class="text-white/70 group-hover:text-white transition-colors">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                        <!-- إيميل -->
+                                        <a href="mailto:info@hannaghair.com"
+                                            class="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 flex items-center space-x-4 space-x-reverse">
+                                            <div
+                                                class="bg-white/20 rounded-full p-3 group-hover:bg-white/30 transition-all duration-300">
+                                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h5 class="text-white font-bold text-lg">البريد الإلكتروني</h5>
+                                                <p class="text-red-100 text-sm">للاستفسارات الرسمية</p>
+                                            </div>
+                                            <div class="text-white/70 group-hover:text-white transition-colors">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Social Media Platforms -->
+                                <div>
+                                    <h4 class="text-lg font-bold text-secondary mb-4 text-center mt-4">📱 منصات التواصل
+                                        الاجتماعي
+                                    </h4>
+                                    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
+                                        <!-- انستغرام -->
+                                        <a href="https://www.instagram.com/hannaghayr?igsh=MXVpNXoydWJzZXJ2Yg%3D%3D&utm_source=qr"
+                                            class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                            </svg>
+                                        </a>
+
+                                        <!-- فيسبوك -->
+                                        <a href="https://facebook.com/hannaghair"
+                                            class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                            </svg>
+                                        </a>
+
+                                        <!-- تويتر X -->
+                                        <a href="https://x.com/hannaghayr?s=21"
+                                            class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                            </svg>
+                                        </a>
+
+                                        <!-- لينكد إن -->
+                                        <a href="https://linkedin.com/company/hannaghair"
+                                            class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                            </svg>
+                                        </a>
+
+                                        <!-- سناب شات -->
+                                        <a href="https://snapchat.com/add/hannaghayr"
+                                            class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.404-5.958 1.404-5.958s-.359-.719-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-12.013C24.007 5.367 18.641.001.017.001z" />
+                                            </svg>
+                                        </a>
+
+                                        <!-- تيك توك -->
+                                        <a href="https://www.tiktok.com/@hanna.ghayr?_t=ZS-8zX1XCs9Oop&_r=1"
+                                            class="group rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/25 flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300"
+                                                fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="mx-auto mt-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl border border-primary/20 max-w-md">
+                                    <div class="p-6 rounded-2xl">
+                                        <h3 class="text-xl font-bold text-white mb-6 text-center">📞 معلومات التواصل
+                                        </h3>
+                                        <div class="space-y-4">
+                                            <div class="flex items-center space-x-4 space-x-reverse">
+                                                <div
+                                                    class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                                    <span class="text-dark text-xl">📱</span>
+                                                </div>
+                                                <div>
+                                                    <p class="text-white font-bold">الهاتف</p>
+                                                    <p class="text-gray-400">0591364139</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center space-x-4 space-x-reverse">
+                                                <div
+                                                    class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+                                                    <span class="text-dark text-xl">✉️</span>
+                                                </div>
+                                                <div>
+                                                    <p class="text-white font-bold">البريد الإلكتروني</p>
+                                                    <p class="text-gray-400">info@hannaghair.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center space-x-4 space-x-reverse">
+                                                <div
+                                                    class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                                                    <span class="text-dark text-xl">📍</span>
+                                                </div>
+                                                <div>
+                                                    <p class="text-white font-bold">الموقع</p>
+                                                    <p class="text-gray-400">الطائف، المملكة العربية السعودية</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modal"
+            class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+            <div class="simple-card max-w-2xl w-full max-h-[80vh] overflow-y-auto transform scale-95 transition-all duration-300"
+                id="modal-content">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6 pb-4 border-b border-primary/20">
+                        <h3 id="modal-title" class="text-2xl font-bold text-primary"></h3>
+                        <button onclick="closeModal()"
+                            class="text-gray-400 hover:text-white text-2xl transition-colors">
+                            ✕
+                        </button>
+                    </div>
+                    <div id="modal-body" class="text-gray-300 leading-relaxed">
+                        <!-- Modal content will be inserted here -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-primary/20 bg-darker/50">
-        <div class="max-w-6xl mx-auto text-center">
-            <div class="flex items-center justify-center space-x-3 space-x-reverse mb-6">
-                <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png"
-                    alt="شعار حنّا غير" class="w-24 h-auto object-contain">
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-primary/20 bg-darker/50">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="flex items-center justify-center space-x-3 space-x-reverse mb-6">
+                    <img src="https://i.postimg.cc/hG5rZncL/588c5911-f70e-45b3-bf27-d3a35b23feb8-fi-02.png"
+                        alt="شعار حنّا غير" class="w-24 h-auto object-contain">
+                </div>
+                <p class="text-gray-400 mb-4">نروي قصتك بأسلوب مختلف ✨</p>
+                <p class="text-gray-500 text-sm">© 2024 حنّا غير. جميع الحقوق محفوظة.</p>
             </div>
-            <p class="text-gray-400 mb-4">نروي قصتك بأسلوب مختلف ✨</p>
-            <p class="text-gray-500 text-sm">© 2024 حنّا غير. جميع الحقوق محفوظة.</p>
+        </footer>
+
+
+        <div class="contact-wrapper d-flex flex-column align-items-start gap-3">
+
+            <div class="whatsapp-wrapper d-flex align-items-center gap-2 wow animate__animated animate__bounceIn">
+                <a href="tel:0591364139" class="phone-icon">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.73 3.84.73a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21.5 2.5 13.93 2.5 4a1 1 0 011-1H7a1 1 0 011 1c0 1.34.25 2.64.73 3.84a1 1 0 01-.21 1.11l-2.2 2.2z" />
+                    </svg>
+                </a>
+            </div>
+
+
+
+            <div class="whatsapp-wrapper d-flex align-items-center gap-2 wow animate__animated animate__bounceIn">
+                <a href="https://wa.me/966591364139" target="_blank" class="whatsapp-icon">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+                    </svg>
+
+
+                </a>
+            </div>
+
         </div>
-    </footer>
-
-
-    <div class="contact-wrapper d-flex flex-column align-items-start gap-3">
-
-        <div class="whatsapp-wrapper d-flex align-items-center gap-2">
-            <a href="tel:0591364139" class="phone-icon">
-                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.73 3.84.73a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21.5 2.5 13.93 2.5 4a1 1 0 011-1H7a1 1 0 011 1c0 1.34.25 2.64.73 3.84a1 1 0 01-.21 1.11l-2.2 2.2z" />
-                </svg>
-            </a>
-        </div>
-
-
-
-        <div class="whatsapp-wrapper d-flex align-items-center gap-2">
-            <a href="https://wa.me/966591364139" target="_blank" class="whatsapp-icon">
-                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
-                </svg>
-
-
-            </a>
-        </div>
-
     </div>
-</div>
     <!-- JavaScript -->
     <script>
         // Navbar Scroll Effect
@@ -2577,66 +2604,66 @@ ${data.message}
         }
     </script>
 
-<script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      // أخفي السبلاش
-      const splash = document.getElementById('splash');
-      splash.style.opacity = "0";
-      splash.style.transition = "opacity 0.6s ease";
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                // أخفي السبلاش
+                const splash = document.getElementById('splash');
+                splash.style.opacity = "0";
+                splash.style.transition = "opacity 0.6s ease";
 
-      setTimeout(() => splash.remove(), 600);
+                setTimeout(() => splash.remove(), 600);
 
-      // أظهر المحتوى
-      const content = document.getElementById('page-content');
-      content.classList.remove("opacity-0", "pointer-events-none");
+                // أظهر المحتوى
+                const content = document.getElementById('page-content');
+                content.classList.remove("opacity-0", "pointer-events-none");
 
-      // أعد تشغيل WOW
-      new WOW().init();
+                // أعد تشغيل WOW
+                new WOW().init();
 
-    }, 2000); // مدة السبلاش
-  });
-</script>
+            }, 2000); // مدة السبلاش
+        });
+    </script>
 
 
 
     <script>
-// Desktop
-const langMenuBtn = document.getElementById("langMenuBtn");
-const langMenu = document.getElementById("langMenu");
+        // Desktop
+        const langMenuBtn = document.getElementById("langMenuBtn");
+        const langMenu = document.getElementById("langMenu");
 
-langMenuBtn.addEventListener("click", () => {
-  langMenu.classList.toggle("hidden");
-});
+        langMenuBtn.addEventListener("click", () => {
+            langMenu.classList.toggle("hidden");
+        });
 
-// Mobile
-const mobileLangMenuBtn = document.getElementById("mobileLangMenuBtn");
-const mobileLangMenu = document.getElementById("mobileLangMenu");
+        // Mobile
+        const mobileLangMenuBtn = document.getElementById("mobileLangMenuBtn");
+        const mobileLangMenu = document.getElementById("mobileLangMenu");
 
-mobileLangMenuBtn.addEventListener("click", () => {
-  mobileLangMenu.classList.toggle("hidden");
-});
+        mobileLangMenuBtn.addEventListener("click", () => {
+            mobileLangMenu.classList.toggle("hidden");
+        });
 
-// إغلاق القوائم عند الضغط خارجها
-window.addEventListener("click", function (e) {
-  if (!langMenu.contains(e.target) && !langMenuBtn.contains(e.target)) {
-    langMenu.classList.add("hidden");
-  }
-  if (!mobileLangMenu.contains(e.target) && !mobileLangMenuBtn.contains(e.target)) {
-    mobileLangMenu.classList.add("hidden");
-  }
-});
+        // إغلاق القوائم عند الضغط خارجها
+        window.addEventListener("click", function (e) {
+            if (!langMenu.contains(e.target) && !langMenuBtn.contains(e.target)) {
+                langMenu.classList.add("hidden");
+            }
+            if (!mobileLangMenu.contains(e.target) && !mobileLangMenuBtn.contains(e.target)) {
+                mobileLangMenu.classList.add("hidden");
+            }
+        });
 
- mobileLangMenuBtn.addEventListener("click", () => {
-    if (mobileLangMenu.classList.contains("max-h-0")) {
-      mobileLangMenu.classList.remove("max-h-0");
-      mobileLangMenu.classList.add("max-h-40"); 
-    } else {
-      mobileLangMenu.classList.remove("max-h-40");
-      mobileLangMenu.classList.add("max-h-0");
-    }
-  });
-</script>
+        mobileLangMenuBtn.addEventListener("click", () => {
+            if (mobileLangMenu.classList.contains("max-h-0")) {
+                mobileLangMenu.classList.remove("max-h-0");
+                mobileLangMenu.classList.add("max-h-40");
+            } else {
+                mobileLangMenu.classList.remove("max-h-40");
+                mobileLangMenu.classList.add("max-h-0");
+            }
+        });
+    </script>
     <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'97d8525aa72bc244',t:'MTc1NzYwNTgzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
